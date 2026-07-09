@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holamundo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body bgcolor="grey">
+
+   
+
+    <div class="container mt-5 text-center">
+        
+        <h1 class="text-primary mb-4">¡Hola, 3B!</h1>
+        <p class="lead">Estoy dibujando con codigo.</p>
+
+        <canvas id="miLienzo" width="500" height="300" class="border border-3 border-secondary rounded shadow bg-white"></canvas>
+        
+    </div>
+
+    <script>
+        // 1. Obtener el lienzo
+        var canvas = document.getElementById("miLienzo");
+        
+        // 2. Obtener el contexto para dibujar (el pincel)
+        var ctx = canvas.getContext("2d");
+
+        // 3. Dibujar un rectángulo verde
+        ctx.fillStyle = "green"; 
+        ctx.fillRect(50, 50, 150, 100); 
+
+        // 4. Dibujar un círculo azul
+        ctx.beginPath(); 
+        ctx.arc(350, 150, 60, 0, 2 * Math.PI); 
+        ctx.fillStyle = "blue"; 
+        ctx.fill(); 
+
+        // 5. (Opcional) Agregar un texto dentro del canvas
+        ctx.fillStyle = "black";
+        ctx.font = "20px Arial";
+        ctx.fillText("¡Lo logré!", 210, 280);
+    </script>
+
+    
+</body>
+</html>
